@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {LiaAngleDownSolid} from "react-icons/lia"
 import { useState } from 'react'
+import Mobile from './mobile/Mobile'
 
 const Header = () => {
     const [active, setactive] = useState(false);
@@ -48,6 +49,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <Mobile/> 
         </header>
     )
 }
