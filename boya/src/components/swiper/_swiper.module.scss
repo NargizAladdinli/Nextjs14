@@ -1,0 +1,23 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+.slider{
+    background-color: var.$greyclr;
+    .image{
+        width: 100%;
+        img{
+            @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+        }
+    }
+    .content{
+        @include mixin.flex($j_content:center,$a_items:center);
+        height: 100%;
+        margin: auto;
+        max-width: 556.364px;
+        padding: 61px;
+        h1{
+            @include mixin.text($colrs:var.$whiteclr,$f_size:50px,$f_weight:400,$l_heit: 61.364px,$l_spacing: 1.023px);
+            font-family: var.$cormonant;
+        }
+    }
+}

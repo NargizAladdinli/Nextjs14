@@ -1,0 +1,48 @@
+@use '../../scss/partials/mixin' as mixin;
+@use '../../scss/partials/variable' as var;
+
+.services{
+    padding-top: 70px;
+    @media (max-width:1024px) {
+        .image{
+            display: none;
+        }
+        .content{
+            gap: 50px !important;
+            .item{
+                p{
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+    .image{
+        width: 100%;
+        img{
+            @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+        }
+    }
+    .content{
+        @include mixin.text($ground:var.$greyclr,$colrs:var.$whiteclr);
+        @include mixin.flex($j_content:flex-end,$a_items:flex-start,$f_direction:column,$gap:152px);
+        padding: 64px 54px 54px 64px;
+        font-family: var.$roboto;
+        .item{
+            h3{
+                @include mixin.text($f_size:32px,$f_weight:400);
+            }
+            p{
+                margin-top: 30px;
+                margin-bottom: 85px;
+                @include mixin.text($f_size:18px,$f_weight:400);
+            }
+        }
+        .viev{
+            a{
+                @include mixin.text($colrs:var.$whiteclr,$f_size:var.$xtrLarge,$f_weight:400,$l_heit:24px,$border:1px solid var.$brandclr,$ground:var.$rgbaclr);
+                padding: 16px 32px;
+            }
+        }
+    }
+}

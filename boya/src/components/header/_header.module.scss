@@ -1,0 +1,127 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+.header{
+    padding: 14px 0;
+    .flexbl{ 
+        @media (max-width:1024px) {
+            .menu,.number,.lang{
+                display: none;
+            }
+            .btn{
+                display: block !important;
+            }
+        }
+        @media (max-width:1200px) {
+            .menu{
+                .menuList{
+                    li{
+                        padding-left: 20px !important;
+                    }
+                }
+            }
+        }
+        @include mixin.flex($a_items:center, $j_content:space-between);
+        .logo{
+            width: 96px;
+            height: 48px;
+            img{
+                @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+            }
+        }
+        .menu{
+            .menuList{
+                @include mixin.flex($a_items:center,$j_content:center);
+                li{
+                    padding-left: 40px;
+                    a{
+                        @include mixin.text($f_size:var.$large,$colrs:var.$greyclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
+                        svg{
+                            padding-left: 8px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .lang{
+            a{
+                @include mixin.text($f_size:var.$large,$colrs:var.$greyclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
+            }
+        }
+        .number{
+            a{
+                padding: 14px 27.5px;
+                @include mixin.text($ground:var.$brandclr,$colrs:var.$whiteclr,$f_size:var.$xtrLarge,$f_weight:500,);
+            }
+        }
+        .btn{
+            display: none;
+            cursor: pointer;
+            @include mixin.img($wid:34px,$heit:34px);
+            @include mixin.text($ground:var.$greyclr,$t_align:center,$radius:6px,$l_heit:19px);
+            .close{
+                @include mixin.text($ground: transparent, $border: none);
+                    position: relative;
+                    width: 24px;
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        @include mixin.position($position: absolute, $left: 9px, $top: -7px);
+                        @include mixin.img($wid: 100%, $heit: 2px);
+                        @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                        transition: all .3s ease-in-out;
+                        transform: rotate(-45deg) translate(-50%, -50%);
+                    }
+                    span {
+                        @include mixin.position($position: absolute, $right: 0);
+                        @include mixin.img($wid: 80%, $heit: 2px);
+                        display: inline-block;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                        transition: all .3s ease-in-out;
+                    }
+                    &::before {
+                        content: "";
+                        @include mixin.position($position: absolute, $right: -8px, $top: 10px);
+                        @include mixin.img($wid: 100%, $heit: 2px);
+                        @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                        transition: all .3s ease-in-out;
+                        transform: rotate(45deg) translate(-50%, -50%);
+                    }
+            }
+            .open {
+                @include mixin.text($ground: transparent, $border: none);
+                position: relative;
+                width: 24px;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    @include mixin.position($position: absolute, $left: 0, $top: -5px);
+                    @include mixin.img($wid: 100%, $heit: 2px);
+                    @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                    transition: all .3s ease-in-out;
+                }
+                span {
+                    @include mixin.position($position: absolute, $right: 0);
+                    @include mixin.img($wid: 80%, $heit: 2px);
+                    display: inline-block;
+                    opacity: 1;
+                    visibility: visible;
+                    @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                    background-color: var.$whiteclr;
+                    transition: all .3s ease-in-out;
+                }
+                &::before {
+                    content: "";
+                    @include mixin.position($position: absolute, $right: 0, $top: 5px);
+                    @include mixin.img($wid: 60%, $heit: 2px);
+                    @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+        }
+    }
+}
