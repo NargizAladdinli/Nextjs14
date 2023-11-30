@@ -1,0 +1,62 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+.contact{
+    padding-top: 160px;
+    .content{
+        color: var.$gray1;
+        font-family: Roboto;
+        .title{
+            h3{
+                @include mixin.text($colrs:var.$contact,$f_size:36px,$f_weight:300);
+                @include mixin.breakpoint('wide'){
+                    font-size: 64px;
+                    line-height: 64px;
+                }
+            }
+            h2{
+                @include mixin.text($f_size:36px,$f_weight:700);
+                @include mixin.breakpoint('wide'){
+                    font-size: 64px;
+                    line-height:64px;
+                }
+            }
+        }
+        .item{
+            @include mixin.breakpoint('wide'){
+                padding-top: 34px;
+            }
+            padding-top: 14px;
+            h4{
+                @include mixin.text($f_size:18px,$f_weight:700);
+            }
+            p{
+                @include mixin.text($f_size:16px,$f_weight:300);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+        .link{
+            margin-top: 33px;
+           a{
+            @include mixin.img($wid:222px,$heit:71px);
+            @include mixin.text($ground:var.$gray1,$colrs:var.$whiteclr,$f_size:12px,$f_weight:400,$l_heit:12px,$l_spacing:2.4px);
+            @include mixin.flex($j_content:center,$a_items:center);
+           } 
+        }
+    }
+    .maps{
+        @include mixin.img($wid:100%,$heit:100%);
+        iframe{
+            @include mixin.img($wid:100%,$heit:100%); 
+        }
+    }
+    .link{
+        margin-top: 33px;
+       a{
+        @include mixin.img($wid:222px,$heit:71px);
+        @include mixin.text($ground:var.$gray1,$colrs:var.$whiteclr,$f_size:12px,$f_weight:400,$l_heit:12px,$l_spacing:2.4px);
+        @include mixin.flex($j_content:center,$a_items:center);
+       } 
+    }
+}

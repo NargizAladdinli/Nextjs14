@@ -1,0 +1,27 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+.blogs{
+    padding-top: 77px;
+    .carts{
+        .image{
+            width: 100%;
+            img{
+                @include mixin.img($wid:100%,$heit:100%);
+            }
+        }
+        .content{
+            padding-top: 26px;
+            font-family: Urbanist;
+            color: var(--neutral-01, #181818);
+            span{
+                font-size: 18px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 32px;
+                font-weight: 300;
+            }
+        }
+    }
+}

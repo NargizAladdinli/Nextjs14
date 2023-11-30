@@ -1,0 +1,4 @@
+%_num {
+    padding: 14px 27.5px;
+    @include mixin.text($ground: var.$brandclr, $colrs: var.$whiteclr, $f_size: var.$xtrLarge, $f_weight: 500, );
+}

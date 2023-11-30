@@ -5,7 +5,8 @@ const Services = () => {
     return(
         <section className={style.services}>
             <div className="container">
-                <div className="row g-4">
+                <h2>Our Services</h2>
+                <div className="row g-3">
                     <Service/>
                 </div>
             </div>

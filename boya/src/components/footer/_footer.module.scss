@@ -1,0 +1,50 @@
+@use '../../scss/partials/mixin' as mixin;
+@use '../../scss/partials/variable' as var;
+
+.footer{
+    background-color: var.$greyclr;
+    padding: 58px 0 24px 0;
+    .logo{
+        @include mixin.img($wid:145px,$heit:95px);
+        img{
+            @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+        }
+    }
+    .list{
+        h4{
+            @include mixin.text($colrs:var.$whiteclr,$f_size:16px,$f_weight:700);
+            font-family: Roboto;
+        }
+        .listmenu{
+            margin-top: 25px;
+            &:first-child {
+                padding-top: 0;
+            }
+            li{
+                padding-top: 16px;
+                a{
+                    @include mixin.text($colrs:var.$whiteclr,$f_size:14px,$f_weight:500,$l_heit:24px,$l_spacing:0.42px);
+                    font-family: Roboto;
+                }
+                svg{
+                    margin-right: 14px;
+                }
+            }
+        }
+        .sosiallist{
+            @include mixin.flex($a_items:center,$gap:40px);
+
+        }
+    }
+    .border{
+        border-top: 1px solid rgba(200, 200, 200, 0.50);
+        text-align: center;
+        margin-top: 60px;
+        p{
+            margin-top: 24px;
+            margin-bottom: 0;
+            @include mixin.text($colrs:rgba(200, 200, 200, 0.50),$f_size:12px,$f_weight:400,$l_heit:22px);
+            font-family: Open Sans;
+        }
+    }
+}

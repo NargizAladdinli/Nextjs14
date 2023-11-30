@@ -1,0 +1,42 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+.locations{
+    padding-top: 130px;
+    .carts{
+        @include mixin.text($radius:10px,$border:1px solid var.$borderclr,$ground: var.$bglocation);
+        padding: 55px 80px;
+        @include mixin.breakpoint('large'){
+            padding: 55px 50px;
+        }
+        @include mixin.breakpoint('wide'){
+            padding: 55px 105px;
+        }
+        h4{
+            @include mixin.text($colrs:var.$locationtext,$f_size:22px,$f_weight:600);
+            font-family: Inter;
+        }
+        .list{
+            &:first-child {
+                padding-top: 0;
+            }
+            li{
+                padding-top: 30px;
+                a{
+                    @include mixin.text($colrs:var.$borderclr,$f_size:18px,$f_weight:400,$l_heit:23.58px);
+                    font-family: Lato;
+                    svg{
+                        margin-right: 11px;
+                    }
+                }
+            }
+        }
+    }
+    .maps{
+        @include mixin.img($wid:100%,$heit:100%);
+        iframe{
+            border-radius: 10px;
+            @include mixin.img($wid:100%,$heit:100%);
+        }
+    }
+}

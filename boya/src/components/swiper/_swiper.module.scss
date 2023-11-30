@@ -10,7 +10,7 @@
         }
     }
     .content{
-        @include mixin.flex($j_content:center,$a_items:center);
+        @include mixin.flex($j_content:center,$f_direction:column);
         height: 100%;
         margin: auto;
         max-width: 556.364px;
@@ -18,6 +18,14 @@
         h1{
             @include mixin.text($colrs:var.$whiteclr,$f_size:50px,$f_weight:400,$l_heit: 61.364px,$l_spacing: 1.023px);
             font-family: var.$cormonant;
+        }
+        .slide{
+            margin-top: 16px;
+            .slidelink{
+                @include mixin.text($colrs:var.$whiteclr,$f_size:15px,$f_weight:400,$l_heit:21.477px,$l_spacing:2.045px,$border:1px solid var.$brandclr);
+                font-family: Inter;
+                padding: 17.386px 19.483px;
+            }
         }
     }
 }

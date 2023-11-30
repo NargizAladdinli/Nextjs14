@@ -1,0 +1,39 @@
+@use "../../scss/partials/mixin" as mixin;
+@use "../../scss/partials/variable" as var;
+
+
+.projects{
+    padding-top: 70px;
+    h2{
+        @include mixin.text($colrs:var.$brandclr,$f_size:24px,$f_weight:600,$l_heit:64px);
+        font-family: var.$cormonant; 
+        margin-bottom: 0px;
+        @include mixin.breakpoint('wide'){
+            font-size: var.$heading2;
+            margin-bottom: 50px;
+        }
+    }
+    .image{
+        @include mixin.img($wid:100%,$heit:100%);
+        img{
+            @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+        }
+    }
+    .projectLinks{
+        @include mixin.flex($j_content:flex-end);
+        margin-top: 30px;
+        a{
+            @include mixin.flex($j_content:center,$a_items:center);
+            @include mixin.img($wid:150px,$heit:48px);
+            @include mixin.text($colrs:var.$whiteclr,$ground:var.$greyclr,$f_size:var.$small,$f_weight:400,$l_heit:8.246px,$l_spacing:2.4px);
+            font-family: Roboto;
+            svg{
+                margin-left: 10px;
+            }
+            @include mixin.breakpoint('wide'){
+                width: 215.176px;
+                height: 71px;
+            }
+        }
+    }
+}  

@@ -1,0 +1,74 @@
+@use "../../../scss/partials/mixin" as mixin;
+@use "../../../scss/partials/variable" as var;
+
+.openMenu{
+    background-color: var.$greyclr;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    @include mixin.position($position:fixed,$top:0);
+    @include mixin.breakpoint('wide'){
+        display: none;
+    }
+    .flex{
+        @include mixin.flex($j_content:space-between,$a_items:center);
+        .logo{
+            @include mixin.img($wid:68px,$heit:34px);
+            img{
+                @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+            }
+        }
+        .btn{
+            .close{
+                @include mixin.text($ground: transparent, $border: none);
+                    position: relative;
+                    width: 24px;
+                    cursor: pointer;
+                    z-index: 2;
+                    &::after {
+                        content: "";
+                        @include mixin.position($position: absolute, $left: 9px, $top: -7px);
+                        @include mixin.img($wid: 100%, $heit: 2px);
+                        @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                        transition: all .3s ease-in-out;
+                        transform: rotate(-45deg) translate(-50%, -50%);
+                    }
+                    &::before {
+                        content: "";
+                        @include mixin.position($position: absolute, $right: -8px, $top: 10px);
+                        @include mixin.img($wid: 100%, $heit: 2px);
+                        @include mixin.text($ground:var.$whiteclr,$radius:3px);
+                        transition: all .3s ease-in-out;
+                        transform: rotate(45deg) translate(-50%, -50%);
+                    }
+            }
+        }
+    }
+    .menuMobile{
+        .listMobile{
+            padding: 24px;
+            &:first-child {
+                padding-top: 0;
+            }
+            li{
+                padding-top: 15px;
+                a{
+                    @include mixin.text($f_size:var.$large,$colrs:var.$whiteclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
+                    svg{
+                        padding-left: 8px;
+                        font-size: 20px;
+                    }
+                }
+                .dropdown{
+                    list-style: disc;
+                    color: var.$whiteclr;
+                    padding-left: 1rem;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.closemenu{
+    display: none;
+}

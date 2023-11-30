@@ -3,27 +3,13 @@
 
 .services{
     padding-top: 70px;
-    @media (min-width:1200px) {  
-        .content{
-            max-width: 1140px;
-            gap: 50px;
-            .item{
-                p{
-                    margin-top: 25px !important;
-                    margin-bottom: 24px !important;
-                }
-            }
-        }
-    }
-    @media (min-width:992px) {
-        .content{
-            max-width: 960px;
-            gap: 0px !important;
-            .item{
-                p{
-                    margin-top: 10px !important;
-                }
-            }
+    h2{
+        @include mixin.text($colrs:var.$brandclr,$f_size:24px,$f_weight:600,$l_heit:64px);
+        font-family: var.$cormonant; 
+        margin-bottom: 0px;
+        @include mixin.breakpoint('wide'){
+            font-size: var.$heading2;
+            margin-bottom: 50px;
         }
     }
     .image{
@@ -34,17 +20,23 @@
     }
     .content{
         @include mixin.text($ground:var.$greyclr,$colrs:var.$whiteclr);
-        @include mixin.flex($j_content:flex-end,$a_items:flex-start,$f_direction:column,$gap:152px);
-        padding: 64px 54px 54px 64px;
+        @include mixin.flex($j_content:normal,$a_items:flex-start,$f_direction:column,$gap:10px);
+        padding: 44px 34px;
         font-family: var.$roboto;
         height: 100%;
+        @include mixin.breakpoint('medium'){
+            gap: 40px;
+            padding: 24px 14px;
+        }
+        @include mixin.breakpoint('wide'){
+            gap: 152px;
+            padding: 64px 94px; 
+        }
         .item{
             h3{
                 @include mixin.text($f_size:32px,$f_weight:400);
             }
             p{
-                margin-top: 30px;
-                margin-bottom: 85px;
                 @include mixin.text($f_size:18px,$f_weight:400);
             }
         }

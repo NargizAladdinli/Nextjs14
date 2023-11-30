@@ -6,12 +6,12 @@ import Link from 'next/link';
 const Service = () => {
     return(
         <>
-        <div className="col-md-12 col-lg-6 d-none d-lg-block">
+        <div className="col-md-6 col-lg-6">
             <div className={style.image}>
                 <Image src={Block} width={100} height={100} alt='Block'/>
             </div>
         </div>
-        <div className="col-md-12 col-lg-6">
+        <div className="col-md-6 col-lg-6">
             <div className={style.content}>
                 <div className={style.item}>
                     <h3>Fasad işləri</h3>
@@ -22,7 +22,7 @@ const Service = () => {
                 </div>
             </div>
         </div>
-        <div className="col-md-12 col-lg-6">
+        <div className="col-md-6 col-lg-6">
         <div className={style.content}>
                 <div className={style.item}>
                     <h3>Zəmin sistemi</h3>
@@ -33,7 +33,7 @@ const Service = () => {
                 </div>
             </div>
         </div>
-        <div className="col-md-12 col-lg-6 d-none d-lg-block">
+        <div className="col-md-6 col-lg-6">
             <div className={style.image}>
                 <Image src={Block} width={100} height={100} alt='Block'/>
             </div>
