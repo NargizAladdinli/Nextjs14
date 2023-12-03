@@ -6,7 +6,7 @@
     padding: 20px;
     width: 100%;
     display: block;
-    @include mixin.position($position:fixed,$top:0);
+    @include mixin.position($position:fixed,$top:0,$z_index:11);
     @include mixin.breakpoint('wide'){
         display: none;
     }

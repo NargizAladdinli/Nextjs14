@@ -1,0 +1,47 @@
+@use '../../scss/partials/mixin' as mixin;
+@use '../../scss/partials/variable' as var;
+
+.latest{
+    padding-top: 177px;
+    h2{
+        @include mixin.text($colrs:var.$brandclr,$f_size:24px,$f_weight:600,$l_heit:64px,$t_transform:capitalize);
+        font-family: var.$cormonant; 
+        margin-bottom: 0px;
+        @include mixin.breakpoint('wide'){
+            font-size: var.$heading2;
+            margin-bottom: 50px;
+        }
+    }
+    .slide{
+        .image{
+            width: 100%;
+            img{
+                @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+            }
+        }
+        .title{
+            h4{
+                @include mixin.text($colrs:var.$neutral,$f_size:8px,$f_weight:400);
+                font-family: Urbanist;
+                @include mixin.breakpoint('large'){
+                    font-size: 18px;
+                }
+            }
+            p{
+                @include mixin.text($colrs:var.$neutral,$f_size:12px,$f_weight:300);
+                font-family: Urbanist;
+                @include mixin.breakpoint('large'){
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+.swiper{
+    position: relative;
+    .swiper-button-prev {
+        position: absolute;
+        top: 70% !important;
+        left: 15% !important;
+    }
+}  

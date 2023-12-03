@@ -13,7 +13,6 @@ const BlogProvider = ({children}) => {
             const res = await fetch('https://json-server-tan-kappa.vercel.app/blogs');
             const data = await res.json();
             setBlogs(data);
-            console.log(data);
         }
         blogsProducts()
     }, [])

@@ -22,7 +22,6 @@
         @include mixin.text($ground:var.$greyclr,$colrs:var.$whiteclr);
         @include mixin.flex($j_content:normal,$a_items:flex-start,$f_direction:column,$gap:10px);
         padding: 44px 34px;
-        font-family: var.$roboto;
         height: 100%;
         @include mixin.breakpoint('medium'){
             gap: 40px;

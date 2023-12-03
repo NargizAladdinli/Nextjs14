@@ -4,6 +4,7 @@
 .footer{
     background-color: var.$greyclr;
     padding: 58px 0 24px 0;
+    margin-top: 84px;
     .logo{
         @include mixin.img($wid:145px,$heit:95px);
         img{
@@ -13,7 +14,6 @@
     .list{
         h4{
             @include mixin.text($colrs:var.$whiteclr,$f_size:16px,$f_weight:700);
-            font-family: Roboto;
         }
         .listmenu{
             margin-top: 25px;
@@ -24,7 +24,6 @@
                 padding-top: 16px;
                 a{
                     @include mixin.text($colrs:var.$whiteclr,$f_size:14px,$f_weight:500,$l_heit:24px,$l_spacing:0.42px);
-                    font-family: Roboto;
                 }
                 svg{
                     margin-right: 14px;

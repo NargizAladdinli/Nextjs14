@@ -1,0 +1,17 @@
+@use '../../scss/partials/mixin' as mixin;
+@use '../../scss/partials/variable' as var;
+
+.aboutus{
+    padding-top: 80px;
+    .image{
+        width: 100%;
+        img{
+            @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
+        }
+    }
+    .title{
+        p{
+            @include mixin.text($colrs:var.$greyclr,$f_size:16px,$f_weight:300,$l_heit:28.5px);
+        }
+    }
+}

@@ -26,7 +26,6 @@
             @include mixin.flex($j_content:center,$a_items:center);
             @include mixin.img($wid:150px,$heit:48px);
             @include mixin.text($colrs:var.$whiteclr,$ground:var.$greyclr,$f_size:var.$small,$f_weight:400,$l_heit:8.246px,$l_spacing:2.4px);
-            font-family: Roboto;
             svg{
                 margin-left: 10px;
             }

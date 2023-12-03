@@ -18,13 +18,42 @@ const Header = () => {
           </div>
           <nav className={style.menu}>
             <ul className={style.menuList}>
-              <li>
-                <Link href="/">
+              <li onClick={() => {setactive(!active)}}>
+                <Link href="/categories">
                   Məhsullar <LiaAngleDownSolid />
                 </Link>
+                <ul className={`${active ? style.dropdown : 'd-none'}`}>
+                  <li className={style.dropli}>
+                    <Link href="#">Mebellər üçün məhsullar</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Zəmin örtükləri</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Su izolyasiyası məhsulları</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Sənaye sahələri üçün məhsullar</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Həlledicilər</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Cilalayıcılar</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">İnşaat materialları</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Sərt köpük sistemləri</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Boya avadanlıqları</Link>
+                  </li>
+                </ul>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/services">
                   Xidmətlər <LiaAngleDownSolid />
                 </Link>
               </li>
@@ -35,7 +64,7 @@ const Header = () => {
                 <Link href="/blogs">Xəbərlər</Link>
               </li>
               <li>
-                <Link href="/">Haqqımızda</Link>
+                <Link href="/about">Haqqımızda</Link>
               </li>
               <li>
                 <Link href="/contacts">Əlaqə</Link>

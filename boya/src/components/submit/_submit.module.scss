@@ -5,7 +5,6 @@
     padding-top: 100px;
     h3{
         @include mixin.text($colrs:var.$contact,$f_size:36px,$f_weight:300,$l_heit:64px);
-        font-family: Roboto;
         @include mixin.breakpoint('large'){
             font-size: 64px;
         }
@@ -19,7 +18,6 @@
                 input{
                     margin-top: 10px;
                     padding: 22px 15px;
-                    font-family: Roboto;
                     @include mixin.text($colrs:var.$input,$f_size:14px,$f_weight:400,$ground:var.$bginput);
                     @include mixin.img($wid:100%);
                 }
@@ -27,7 +25,6 @@
                     margin-top: 10px;
                     padding: 22px 15px;
                     resize: none;
-                    font-family: Roboto;
                     @include mixin.text($colrs:var.$input,$f_size:14px,$f_weight:400,$ground:var.$bginput);
                     @include mixin.img($wid:100%);
                 }
@@ -36,7 +33,6 @@
                 @include mixin.img($wid:222px,$heit:71px);
                 @include mixin.text($colrs:var.$whiteclr,$f_size:12px,$f_weight:400,$ground:var.$gray1,$l_spacing:2.4px);
                 margin-top: 30px;
-                font-family: Roboto;
                 @include mixin.breakpoint('large'){
                     margin-top: 100px;
                 }

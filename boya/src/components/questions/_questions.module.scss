@@ -1,0 +1,45 @@
+@use '../../scss/partials/mixin' as mixin;
+@use '../../scss/partials/variable' as var;
+
+
+.questions{
+    padding-top:70px;
+    .carts{
+        width: 506px;
+        .border{
+            @include mixin.text($border: 1px solid #D0D0D0);
+            border: 1px solid #D0D0D0;
+            width: 60%;
+            position: relative;
+            &::before{
+                content: '';
+                @include mixin.img($wid:25%,$heit:3px);
+                @include mixin.position($position:absolute,$top:-1px);
+                background-color: var.$brandclr;
+            }
+        }
+        span{
+            margin-top: 27px;
+            display: block;
+            @include mixin.text($colrs:var.$neutral04,$f_size:24px,$f_weight:400);
+            font-family: Urbanist;         
+        }
+        h3{
+            @include mixin.text($colrs:var.$neutral,$f_size:37px,$f_weight:700);
+            font-family: Cormorant Garamond;
+        }
+        ul{
+            list-style: disc;
+            padding-left: 2rem;
+            li{
+                span{
+                    @include mixin.text($colrs:var.$neutral02,$f_size:20px,$f_weight:400,$l_heit:37.464px); 
+                }
+            }
+        }
+        p{
+            margin-top: 30px;
+            @include mixin.text($colrs:var.$neutral02,$f_size:20px,$f_weight:400,$l_heit:37.464px);
+        }
+    }
+}

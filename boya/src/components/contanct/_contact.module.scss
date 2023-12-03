@@ -5,7 +5,6 @@
     padding-top: 160px;
     .content{
         color: var.$gray1;
-        font-family: Roboto;
         .title{
             h3{
                 @include mixin.text($colrs:var.$contact,$f_size:36px,$f_weight:300);

@@ -18,7 +18,7 @@ const Service = () => {
                     <p>Boyaların tərkibi və piqmentlərin davamlılığı nəzərə alınaraq su əsaslı boya ilə rəngləmə işləri həyata keçirilir.</p>
                 </div>
                 <div className={style.viev}>
-                    <Link href="#">View collection</Link>
+                    <Link href="/">View collection</Link>
                 </div>
             </div>
         </div>

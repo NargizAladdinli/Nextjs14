@@ -21,15 +21,29 @@
                 @include mixin.flex($a_items:center,$j_content:center);
                 li{
                     padding-left: 20px;
+                    position: relative;
                     @include mixin.breakpoint ("wide") {
                         max-width: 1140px;
                         padding-left: 40px;                              
                     }
                     a{
                         @include mixin.text($f_size:var.$large,$colrs:var.$greyclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: var.$brandclr;
+                        }
                         svg{
                             padding-left: 8px;
                             font-size: 20px;
+                        }
+                    }
+                    .dropdown{
+                        @include mixin.img($wid:230px,$heit:auto);
+                        @include mixin.position($position:absolute,$left:0,$top:200%,$z_index:11);
+                        padding: 10px;
+                        background-color: #FFFEFE;
+                        .dropli{
+                            padding: 0;
                         }
                     }
                 }
@@ -43,7 +57,8 @@
             a{
                 @include mixin.text($f_size:var.$large,$colrs:var.$greyclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
                 svg{
-                    padding-right: 6px;
+                    margin-right: 6px;
+                    margin-left: 3px;
                 }
             }
         }
