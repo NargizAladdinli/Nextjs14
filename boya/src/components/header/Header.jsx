@@ -18,11 +18,11 @@ const Header = () => {
           </div>
           <nav className={style.menu}>
             <ul className={style.menuList}>
-              <li onClick={() => {setactive(!active)}}>
+              <li>
                 <Link href="/categories">
                   Məhsullar <LiaAngleDownSolid />
                 </Link>
-                <ul className={`${active ? style.dropdown : 'd-none'}`}>
+                <ul className={style.dropdown}>
                   <li className={style.dropli}>
                     <Link href="#">Mebellər üçün məhsullar</Link>
                   </li>

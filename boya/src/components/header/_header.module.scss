@@ -38,12 +38,20 @@
                         }
                     }
                     .dropdown{
-                        @include mixin.img($wid:230px,$heit:auto);
-                        @include mixin.position($position:absolute,$left:0,$top:200%,$z_index:11);
+                        @include mixin.img($wid:270px,$heit:auto);
+                        @include mixin.position($position:absolute,$left:0,$top:100%,$z_index:11);
                         padding: 10px;
                         background-color: #FFFEFE;
+                        display: none;
+                        box-shadow: 0px 0px 20px 0px #0706220F;
                         .dropli{
-                            padding: 0;
+                            padding-left: 0;
+                            padding-top: 5px;
+                        }
+                    }
+                    &:hover{
+                        .dropdown{
+                            display: block;
                         }
                     }
                 }

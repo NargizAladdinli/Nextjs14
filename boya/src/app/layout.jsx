@@ -1,5 +1,5 @@
-import "../scss/_global.scss"
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../scss/_global.scss"
 import {roboto} from '@/app/fonts/font'
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';

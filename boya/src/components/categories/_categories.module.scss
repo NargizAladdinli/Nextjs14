@@ -5,7 +5,8 @@
     padding-top: 100px;
     .carts{
         .img{
-            width: 100%;
+            width: 400px;
+            height: 400px;
             position: relative;
             img{
                 @include mixin.img($wid:100%,$heit:100%,$o_fit:cover);
