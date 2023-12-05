@@ -13,7 +13,7 @@ const Swipers = () => {
   return (
     <>
       <section className={style.slider}>
-      <div className={style.border}></div>
+        <div className={style.border}></div>
         <div className="container-fluid p-0">
           <Swiper
             rewind={true}

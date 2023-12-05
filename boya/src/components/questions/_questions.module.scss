@@ -5,7 +5,10 @@
 .questions{
     padding-top:70px;
     .carts{
-        width: 506px;
+        width: 350px;
+        @include mixin.breakpoint('large'){
+            width: 506px;
+        }
         .border{
             @include mixin.text($border: 1px solid #D0D0D0);
             border: 1px solid #D0D0D0;
@@ -34,13 +37,19 @@
             padding-left: 2rem;
             li{
                 span{
-                    @include mixin.text($colrs:var.$neutral02,$f_size:20px,$f_weight:400,$l_heit:37.464px); 
+                    @include mixin.text($colrs:var.$neutral02,$f_size:18px,$f_weight:400,$l_heit:37.464px); 
+                    @include mixin.breakpoint('large'){
+                        font-size: 20px;
+                    }
                 }
             }
         }
         p{
             margin-top: 30px;
-            @include mixin.text($colrs:var.$neutral02,$f_size:20px,$f_weight:400,$l_heit:37.464px);
+            @include mixin.text($colrs:var.$neutral02,$f_size:18px,$f_weight:400,$l_heit:37.464px);
+            @include mixin.breakpoint('large'){
+                font-size: 20px;
+            }
         }
     }
 }

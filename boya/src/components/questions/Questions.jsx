@@ -5,7 +5,7 @@ const Questions = () => {
         <section className={style.questions}>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-md-6 col-lg-6">
                         <div className={style.carts}>
                             <div className={style.border}></div>
                             <span>01.</span>
@@ -13,7 +13,7 @@ const Questions = () => {
                             <p>2003-cü ildə təsis edilmiş "Katsan Group" MMC mebel, inşaat, sənaye və digər sahələrdə tələb olunan istənilən növ boyaların satışını həyata keçirir.</p>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-md-6 col-lg-6">
                         <div className={style.carts}>
                             <div className={style.border}></div>
                             <span>02.</span>
@@ -21,7 +21,7 @@ const Questions = () => {
                             <p>Müştəri məmnuniyyətini nəzərə alaraq keyfiyyətli məhsulların satışını həyata keçirməkdir.</p>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-md-6 col-lg-6">
                         <div className={style.carts}>
                             <div className={style.border}></div>
                             <span>03.</span>
@@ -30,7 +30,7 @@ const Questions = () => {
                             <p>İlk fəaliyyətinə Türkiyə Cümhuriyyətindən boya məhsullarının idxal və topdan satışı ilə başlayan şirkətimiz qısa müddət ərzində inkişaf edərək yüksək səviyyəli xidməti ilə seçilən müasir ticarət şirkətinə çevrilmiş və əməkdaşlıq etdiyi ölkələrin siyahısına BƏƏ, Çin, İran , Rusiya, İtaliya kimi İstehsalçı ölkələri də əlavə etmişdir.</p>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-md-6 col-lg-6">
                         <div className={style.carts}>
                             <div className={style.border}></div>
                             <span>04.</span>

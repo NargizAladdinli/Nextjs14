@@ -1,14 +1,14 @@
 import Contact from "@/components/contanct/Contact";
+import Locations from "@/components/locations/Locations";
 import Submit from "@/components/submit/Submit";
 
-
-const Contacts = () => {
+const Shops = () => {
     return(
         <main>
             <Contact/>
+            <Locations/>
             <Submit/>
         </main>
     )
 }
-
-export default Contacts;
+export default Shops;
