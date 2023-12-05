@@ -1,25 +1,25 @@
-'use client'
-import { createContext, useEffect, useState } from "react";
+// 'use client'
+// import { createContext, useEffect, useState } from "react";
 
 
-export const BlogContext = createContext();
+// export const BlogContext = createContext();
 
-const BlogProvider = ({children}) => {
-    const [blogs, setBlogs] = useState([]);
-    const value = {blogs, setBlogs}
+// const BlogProvider = ({children}) => {
+//     const [blogs, setBlogs] = useState([]);
+//     const value = {blogs, setBlogs}
 
-    useEffect(() => {
-        const blogsProducts = async() => {
-            const res = await fetch('https://json-server-tan-kappa.vercel.app/blogs');
-            const data = await res.json();
-            setBlogs(data);
-        }
-        blogsProducts()
-    }, [])
+//     useEffect(() => {
+//         const blogsProducts = async() => {
+//             const res = await fetch('https://json-server-tan-kappa.vercel.app/blogs');
+//             const data = await res.json();
+//             setBlogs(data);
+//         }
+//         blogsProducts()
+//     }, [])
 
-    return(
-        <BlogContext.Provider value={value}>{children}</BlogContext.Provider>
-    )
-}
+//     return(
+//         <BlogContext.Provider value={value}>{children}</BlogContext.Provider>
+//     )
+// }
 
-export default BlogProvider;
+// export default BlogProvider;

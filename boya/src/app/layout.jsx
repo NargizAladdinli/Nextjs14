@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <BlogProvider>
+        {/* <BlogProvider> */}
         <Header/>
         {children}
         <Footer/>
-        </BlogProvider>
+        {/* </BlogProvider> */}
         </body>
     </html>
   )

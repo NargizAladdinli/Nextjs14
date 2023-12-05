@@ -1,20 +1,21 @@
 'use client'
-import { useContext } from 'react';
 import style from './_blogs.module.scss'
-import { BlogContext } from '@/context/blogs.context';
+import { getPosts } from '@/app/libs/post';
 import Blog from './Blog';
 
-const BlogPage = () => {
-    const {blogs} = useContext(BlogContext)
+const BlogPage = async () => {
+    // const {blogs} = useContext(BlogContext)
+    const blogs = await getPosts()
     return(
         <section className={style.blogs}>
             <div className="container">
                 <div className="row g-3">
-                    {blogs.map((item) => {
+                    {
+                  blogs ?  blogs.map((item) => {
                         return(
                             <Blog key={item.id} items={item}/>
-                        )
-                    })}
+                        ) 
+                    }) : "nine"}
                 </div>
             </div>
         </section>
