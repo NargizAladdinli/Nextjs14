@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-12 col-md-4 col-lg-3">
             <div className={style.logo}>
-              <Image src={logo} />
+              <img src="https://s3-alpha-sig.figma.com/img/ede1/13d6/9edf64dedc4a16120c7a2f5f41c7726b?Expires=1702857600&Signature=OYIVoZly4i5USC6QhAUP9SIXdQFvEJOjmA3rd0F6YvyEFdvet9CDuI69mDNfVe3UsVdAP2uJsavWjnHfVPkSvZ90R7o7iNpvjxav0OnxOJktX3jPw0D78dNlyqmGoEaoKq4MTQCV~mMagRZyjJgNN29mtu8eCGqL2Q5xpt7i0IPXUPHMRZgNSHjyLUkvEwTafAlf1p6CwBIB7xdeDCTU-46Lfz4P1xMcfX9JszbtJnlhZHeJcRAkyGZYJ48TbuCqZQY7B75-5H8qx~pN5GgE6EmXq5M5coFcA1PHmYrvrDcdHrSK5oUfEv3CpiJAXlzQlJd7InvVpws5gqlxaUMn1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
             </div>
           </div>
           <div className="col-6 col-md-4 col-lg-3">

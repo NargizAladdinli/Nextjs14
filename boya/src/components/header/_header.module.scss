@@ -39,7 +39,7 @@
                     }
                     .dropdown{
                         @include mixin.img($wid:270px,$heit:auto);
-                        @include mixin.position($position:absolute,$left:0,$top:100%,$z_index:11);
+                        @include mixin.position($position:absolute,$left:35px,$top:100%,$z_index:11);
                         padding: 10px;
                         background-color: #FFFEFE;
                         display: none;
@@ -59,6 +59,7 @@
         }
         .lang{
             display: none;
+            position: relative;
             @include mixin.breakpoint("wide"){
                 display: block;
             }
@@ -67,6 +68,23 @@
                 svg{
                     margin-right: 6px;
                     margin-left: 3px;
+                }
+            }
+            .dropdown{
+                @include mixin.img($wid:92px,$heit:auto);
+                @include mixin.position($position:absolute,$left:10px,$top:100%,$z_index:11);
+                padding: 10px;
+                background-color: #FFFEFE;
+                display: none;
+                box-shadow: 0px 0px 20px 0px #0706220F;
+                .dropli{
+                    padding-left: 0;
+                    padding-top: 5px;
+                }
+            }
+            &:hover{
+                .dropdown{
+                    display: block;
                 }
             }
         }
@@ -78,6 +96,10 @@
             a{
                 padding: 14px 27.5px;
                 @include mixin.text($ground:var.$brandclr,$colrs:var.$whiteclr,$f_size:var.$xtrLarge,$f_weight:500,);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background: var.$greyclr;
+                }
             }
         }
         .btn{

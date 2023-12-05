@@ -13,6 +13,7 @@ const Swipers = () => {
   return (
     <>
       <section className={style.slider}>
+      <div className={style.border}></div>
         <div className="container-fluid p-0">
           <Swiper
             rewind={true}
@@ -78,6 +79,7 @@ const Swipers = () => {
                 </div>
                 <div className="col-lg-6 p-0">
                   <div className={style.content}>
+                    
                     <h1>
                       Unlock your home’s potential: order free color chips
                       online.

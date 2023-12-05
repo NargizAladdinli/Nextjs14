@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container">
         <div className={style.flexbl}>
           <div className={style.logo}>
-           <Link href="/"> <Image src={Logo} width={200} height={100} alt="logo" /></Link>
+           <Link href="/"> <img src="https://s3-alpha-sig.figma.com/img/ede1/13d6/9edf64dedc4a16120c7a2f5f41c7726b?Expires=1702857600&Signature=OYIVoZly4i5USC6QhAUP9SIXdQFvEJOjmA3rd0F6YvyEFdvet9CDuI69mDNfVe3UsVdAP2uJsavWjnHfVPkSvZ90R7o7iNpvjxav0OnxOJktX3jPw0D78dNlyqmGoEaoKq4MTQCV~mMagRZyjJgNN29mtu8eCGqL2Q5xpt7i0IPXUPHMRZgNSHjyLUkvEwTafAlf1p6CwBIB7xdeDCTU-46Lfz4P1xMcfX9JszbtJnlhZHeJcRAkyGZYJ48TbuCqZQY7B75-5H8qx~pN5GgE6EmXq5M5coFcA1PHmYrvrDcdHrSK5oUfEv3CpiJAXlzQlJd7InvVpws5gqlxaUMn1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" /></Link>
           </div>
           <nav className={style.menu}>
             <ul className={style.menuList}>
@@ -56,6 +56,14 @@ const Header = () => {
                 <Link href="/services">
                   Xidmətlər <LiaAngleDownSolid />
                 </Link>
+                <ul style={{width:'94px'}} className={style.dropdown}>
+                  <li className={style.dropli}>
+                    <Link href="#">Fasad işləri</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Zəmin işləri</Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link href="/">Layihələr</Link>
@@ -130,6 +138,17 @@ const Header = () => {
                 />
               </svg>
             </Link>
+            <ul style={{width:'92px'}} className={style.dropdown}>
+                  <li className={style.dropli}>
+                    <Link href="#">English</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Azerbaijani</Link>
+                  </li>
+                  <li className={style.dropli}>
+                    <Link href="#">Russian</Link>
+                  </li>
+                </ul>
           </div>
           <div className={style.number}>
             <Link href="#">+994 51 555 55 55</Link>

@@ -68,6 +68,20 @@
             }
         }
     }
+    .our{
+        .lang{
+            padding-top: 15px;
+            position: relative;
+            a{
+                @include mixin.text($f_size:14px,$colrs:var.$whiteclr,$f_style:normal,$f_weight:400,$t_transform:capitalize);
+                svg{
+                    margin-right: 6px;
+                    margin-left: 3px;
+                }
+            }
+        }
+        
+    }
 }
 .closemenu{
     display: none;

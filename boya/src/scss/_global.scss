@@ -16,3 +16,16 @@ a{
 .container{
     max-width: 1240px;
 }
+.swiper{
+    position: relative;
+    .swiper-button-prev {
+        position: absolute;
+        top: 85% !important;
+        left: 15% !important;
+    }
+    .swiper-button-next{
+        position: absolute;
+        top: 95% !important;
+        left: 15% !important;
+    }
+}  
