@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './_blogs.module.scss'
 
-const SingleBlog = ({items}) => {
+const Blog = ({items}) => {
     const {img, body,title} = items
     return(
         <div className="col-md-6 col-lg-6">
@@ -19,4 +19,4 @@ const SingleBlog = ({items}) => {
         </div>
     )
 }
-export default SingleBlog;
+export default Blog;

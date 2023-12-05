@@ -13,7 +13,7 @@
     object-fit: $o_fit;
     object-position: $o_pos;
 }
-@mixin position($position:null,$bottom:null,$top:null,$left:null,$right:null,$z_index:null, $flow: null){
+@mixin position($position:null,$bottom:null,$top:null,$left:null,$right:null,$z_index:null, $flow: null, $inset: null){
     overflow: $flow;
     position: $position;
     top: $top;
@@ -21,6 +21,7 @@
     bottom: $bottom;
     right: $right;
     z-index: $z_index;
+    inset: $inset;
 }
 
 @mixin text($t_decoration: null, $colrs: null, $f_size: null, $f_weight: null, $t_align: null, $ground: null, $border: null, $l_spacing: null, $l_heit: null, $radius: null, $f_style: null, $t_transform:null) {

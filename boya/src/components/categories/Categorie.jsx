@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import style from './_categories.module.scss';
+import Link from 'next/link';
 
 const Categorie = () => {
     const [posts, setPost] = useState([]);
@@ -21,10 +22,12 @@ const Categorie = () => {
                         return(
                             <div key={item.id} className="col-6 col-lg-4">
                                 <div className={style.carts}>
+                                    {/* <Link href='#'> */}
                                     <div className={style.img}>
                                         <img src={item.img} alt="" />
                                         <h3>{item.title}</h3>
                                     </div>
+                                    {/* </Link> */}
                                 </div>
                             </div>
                         )

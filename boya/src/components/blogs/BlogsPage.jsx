@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import style from './_blogs.module.scss'
 import { BlogContext } from '@/context/blogs.context';
-import SingleBlog from './Blog';
+import Blog from './Blog';
 
 const BlogPage = () => {
     const {blogs} = useContext(BlogContext)
@@ -12,7 +12,7 @@ const BlogPage = () => {
                 <div className="row g-3">
                     {blogs.map((item) => {
                         return(
-                            <SingleBlog key={item.id} items={item}/>
+                            <Blog key={item.id} items={item}/>
                         )
                     })}
                 </div>
