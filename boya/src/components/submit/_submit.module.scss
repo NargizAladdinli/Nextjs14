@@ -28,6 +28,10 @@
                     @include mixin.text($colrs:var.$input,$f_size:14px,$f_weight:400,$ground:var.$bginput);
                     @include mixin.img($wid:100%);
                 }
+                .feedback{
+                    color: red;
+                    font-size: 20px;
+                }
             }
             button{
                 @include mixin.img($wid:222px,$heit:71px);
